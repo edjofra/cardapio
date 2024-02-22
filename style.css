@@ -113,11 +113,12 @@ nav>a{
 main{
     padding: 15px;
 }
-h2{
+h2, h3{
    font-size: 17px;
    padding-bottom: 13px;
 
 }
+
 
 div#quad{
     background-color: white;
@@ -129,7 +130,7 @@ div#quad{
 
 div.qua{
    
-   border: 1px solid white;
+    border: 1px solid white;
     border-radius: 20px;
     border-left: 40px;
 
@@ -161,4 +162,32 @@ p.qprice{
     font-weight: 700;
 }
 
+#reta{
+    display: flex;
+    background-color: pink;
+    border: 1px solid white;
+    border-radius: 20px;
+    border-left: 40px;
+
+    width: 345px;
+    height: 80px;
+    
+    margin-right: 15px;
+    
+    box-shadow: 0px 4px 14px 0px #00000033;
+}
+#info{
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    max-width: 180px;
+    margin-left:13px ;
+}
+#price{
+    color: #E03D6E;
+    text-align: left;
+    font-weight: 700;
+}
 
