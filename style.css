@@ -11,12 +11,12 @@
    
 }
 body{
-    width: 420px;
+    max-width: 370px;
     height: 125px;
 }
 header{
     background: #2E3A61;
-    width: 420px;
+    max-width: 370px;
     height: 110px;
     padding-top: 20px;
     
@@ -44,11 +44,11 @@ header > h1{
 div#pesquisar{
     background-color: rgb(253, 249, 253);
    
-font-size: 16px;
-font-weight: 400;
-line-height: 19px;
-letter-spacing: 0em;
-text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
 
     border:solid 1px;
     border-radius: 50px;
