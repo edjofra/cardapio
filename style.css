@@ -11,12 +11,13 @@
    
 }
 body{
-    max-width: 370px;
+    max-width: 425px;
     height: 125px;
+    
 }
 header{
     background: #2E3A61;
-    max-width: 370px;
+    max-width: 425px;
     height: 110px;
     padding-top: 20px;
     
@@ -111,7 +112,8 @@ nav>a{
 
 }
 main{
-    padding: 15px;
+    padding: 22px;
+
 }
 h2 {
    font-size: 17px;
