@@ -234,11 +234,21 @@ div#res{
     background-color: pink;
     width: 70vh;
     margin: auto;
-    text-align: center;
+  
     min-height: 360px;
     
 }
-input#but{
+
+div#buta{
     text-align: center;
+    margin-bottom: 15px;
+}
+#but{
+    background-color: green;
+    color: white;
+} 
+#cle{
+    background-color: red;
+    color: white;
 }
 

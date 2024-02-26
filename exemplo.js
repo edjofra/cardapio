@@ -427,9 +427,11 @@ function imprimir(){
 
         var produto = produtos[index];
         
-        res.innerHTML+=`O produto <strong>${produto.nome}</strong> custa ${produto.preco}R$ <br>` 
+        res.innerHTML+=`<img src="imagens/${produto.imagem}"style="width:100px"> O produto <strong>${produto.nome}</strong> custa ${produto.preco}R$  <br>` 
         
     }
 }
-
+function limpar(){
+    res.innerHTML=''
+}
 
