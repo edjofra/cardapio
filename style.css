@@ -230,4 +230,15 @@ footer>#img-up{
     top: 19px;
     right: 53.5px;
 }
+div#res{
+    background-color: pink;
+    width: 70vh;
+    margin: auto;
+    text-align: center;
+    min-height: 360px;
+    
+}
+input#but{
+    text-align: center;
+}
 

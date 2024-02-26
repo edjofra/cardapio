@@ -419,14 +419,17 @@ var categorias = [
 
 //EXEMPLO DE COMO USA OBJETO
 //função imprime todos os nomes e preços do array de objeto 'produtos'
+var res = document.getElementById('res')
+
+
 function imprimir(){
-    for (var index = 0; index < produtos.length; index++) {
+    for (index in produtos) {
 
         var produto = produtos[index];
         
-        console.log("O Produto: "+produto.nome+" custa R$"+produto.preco);
+        res.innerHTML+=`O produto <strong>${produto.nome}</strong> custa ${produto.preco}R$ <br>` 
         
     }
 }
 
-imprimir();
+
