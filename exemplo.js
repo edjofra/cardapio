@@ -417,24 +417,43 @@ var categorias = [
     }
 ]
 
-//SUBSTITUINDO UM ITEM ORIGINALMENTE EM HTML por um novo criado a partir de objetos JavaScript, aproveitando os CSS originais
+//SUBSTITUINDO todos os ITEM ORIGINALMENTE EM HTML por novos criado a partir de objetos JavaScript, aproveitando os CSS originais
 
 function imprimir(){
-var iR = document.querySelectorAll("div.imgR")[1]
-iR.innerHTML=`<img src="imagens/${produtos[5].imagem}"style="width:140px;border-radius: 20px 0px 0px 20px;">`
+ var but = document.querySelector('input#but')
+ but.style.background = 'red'
+    for( index in produtos){
+    var produto = produtos[index]
 
-var h3 = document.getElementsByTagName('h3')[12]
-h3.innerHTML =`${produtos[5].nome}`
+    var iR = document.querySelectorAll("div.imgR")[index]
+iR.innerHTML=`<img src="imagens/${produto.imagem}"style="max-width:110px;border-radius: 20px 0px 0px 20px;">`
 
-var de = document.querySelectorAll("p.desc")[1]
-de.innerHTML=`${produtos[5].descricao} <br>`
+var h3 = document.getElementsByTagName('h3')[index]
+h3.innerHTML =`${produto.nome}`
 
-var pr = document.querySelectorAll("p.price")[12]
-pr.innerHTML=`R$ ${produtos[5].preco}`
+var de = document.querySelectorAll("p.desc")[index]
+de.innerHTML=`${produto.descricao} <br>`
+
+var pr = document.querySelectorAll("p.price")[index]
+pr.innerHTML=`R$ ${produto.preco}`
+    }      
+
+}
+
+
+
+
+
+/*var iR = document.querySelectorAll("div.imgR")[index]
+iR.innerHTML=`<img src="imagens/${produto.imagem}"style="width:140px;border-radius: 20px 0px 0px 20px;">`
+
+var h3 = document.getElementsByTagName('h3')[index]
+h3.innerHTML =`${produto.nome}`
+
+var de = document.querySelectorAll("p.desc")[index]
+de.innerHTML=`${produto.descricao} <br>`
+
+var pr = document.querySelectorAll("p.price")[index]
+pr.innerHTML=`R$ ${produto.preco}`
  
-
-}
-function limpar(){
-    var reta = document.querySelectorAll("div.reta")[12]
-    reta.innerHTML=``
-}
+}*/

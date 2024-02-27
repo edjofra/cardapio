@@ -188,7 +188,7 @@ p.qprice{
     border: 1px solid white;
     border-radius: 20px;
     
-    width: 390px;
+    width: 340px;
     height: 95px;
     
     box-shadow: 0px 2px 16px 0px #00000040;
@@ -196,24 +196,21 @@ p.qprice{
 
 }
 .info{
-    text-align: left;
-    font-family: "Inter", sans-serif;
-    font-size: 8px;
-    margin-top: 5px;
-    margin-bottom: 9px;
-    max-width:200px;
-    margin-left:13px;
-    padding-bottom:30px;
+  
+    margin-left: 8px;
+   
+    
 }
 p.desc{
     text-align: justify;
     font-family: "Inter", sans-serif;
     font-size: 8px;
     margin-top: 3px;
-    margin-bottom: 25px;
-    
+    margin-bottom: 26px;
+    margin-left:3px;
     max-width:200px;
-    max-height: 15px;
+    max-height: 23px;
+    
 }
 .price{
     color: #2E3A61;
@@ -240,27 +237,20 @@ footer>#img-up{
     top: 19px;
     right: 53.5px;
 }
-div#res{
-    background-color: pink;
-    width: 70vh;
-    margin: auto;
-  
-    min-height: 360px;
-    
-}
+
+
 
 div#buta{
     text-align: center;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
 }
 #but{
     background-color: green;
     color: white;
+    width: 45px;
+    height: 40px;
 } 
-#cle{
-    background-color: red;
-    color: white;
-}
+
 .imgR{
    
     border-radius: 20px 0px 0px 20px;
