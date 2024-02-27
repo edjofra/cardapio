@@ -421,22 +421,15 @@ var categorias = [
 
 function imprimir(){
  var but = document.querySelector('input#but')
+ var res = document.querySelector('div#res')
  but.style.background = 'red'
     for( index in produtos){
     var produto = produtos[index]
-
-    var iR = document.querySelectorAll("div.imgR")[index]
-iR.innerHTML=`<img src="imagens/${produto.imagem}"style="max-width:110px;border-radius: 20px 0px 0px 20px;">`
-
-var h3 = document.getElementsByTagName('h3')[index]
-h3.innerHTML =`${produto.nome}`
-
-var de = document.querySelectorAll("p.desc")[index]
-de.innerHTML=`${produto.descricao} <br>`
-
-var pr = document.querySelectorAll("p.price")[index]
-pr.innerHTML=`R$ ${produto.preco}`
-    }      
+    if(produto.categoria == 3){
+        res.innerHTML+=`O produto ${produto.nome} custa ${produto.preco}R$ <br>`
+    }
+    
+     }      
 
 }
 

@@ -256,3 +256,12 @@ div#buta{
     border-radius: 20px 0px 0px 20px;
   
 }
+
+div#res{
+    background-color: pink;
+    width: 600px;
+    min-height: 200px;
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+}
