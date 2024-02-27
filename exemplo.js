@@ -417,22 +417,24 @@ var categorias = [
     }
 ]
 
-//EXEMPLO DE COMO USA OBJETO
-//função imprime todos os nomes e preços do array de objeto 'produtos'
-var res = document.getElementById('res')
-
+//SUBSTITUINDO UM ITEM ORIGINALMENTE EM HTML por um novo criado a partir de objetos JavaScript, aproveitando os CSS originais
 
 function imprimir(){
-    for (index in produtos) {
+var iR = document.querySelectorAll("div.imgR")[1]
+iR.innerHTML=`<img src="imagens/${produtos[5].imagem}"style="width:140px;border-radius: 20px 0px 0px 20px;">`
 
-        var produto = produtos[index]
-        
-        res.innerHTML+=`<img src="imagens/${produto.imagem}"style="width:100px"> O produto <strong>${produto.nome}</strong> custa ${produto.preco}R$  <br>` 
-        
-    }
+var h3 = document.getElementsByTagName('h3')[12]
+h3.innerHTML =`${produtos[5].nome}`
+
+var de = document.querySelectorAll("p.desc")[1]
+de.innerHTML=`${produtos[5].descricao} <br>`
+
+var pr = document.querySelectorAll("p.price")[12]
+pr.innerHTML=`R$ ${produtos[5].preco}`
+ 
+
 }
 function limpar(){
-    res.innerHTML=''
+    var reta = document.querySelectorAll("div.reta")[12]
+    reta.innerHTML=``
 }
-
-console.log(50)
