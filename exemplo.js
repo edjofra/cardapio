@@ -417,36 +417,54 @@ var categorias = [
     }
 ]
 
-//SUBSTITUINDO todos os ITEM ORIGINALMENTE EM HTML por novos criado a partir de objetos JavaScript, aproveitando os CSS originais
+//CRIANDO os objetos dentro do JavaScript, p/ exibi-los no html, aproveitando os CSS originais 
 
 function imprimir(){
  var but = document.querySelector('input#but')
- var res = document.querySelector('div#res')
+ 
  but.style.background = 'red'
-    for( index in produtos){
-    var produto = produtos[index]
-    if(produto.categoria == 3){
-        res.innerHTML+=`O produto ${produto.nome} custa ${produto.preco}R$ <br>`
-    }
+ var lista = document.querySelector('ul#lista')
+ lista.innerHTML=`<h2>Listando Tudo</h2>`
+ 
+for( index in produtos){
     
-     }      
+    var produto = produtos[index]
+
+    
+    var item = document.createElement('li')
+    item.setAttribute('class','reta')
+    lista.appendChild(item)
+    
+   
+        var divI = document.createElement('div')
+        divI.setAttribute('class', 'imgR')
+        item.appendChild(divI)
+
+            var imgR = document.createElement('p')
+            imgR.setAttribute("class", "price")
+            divI.appendChild(imgR)
+            imgR.innerHTML=`<img src="imagens/${produto.imagem}"style="max-width:110px;border-radius: 20px 0px 0px 20px;">`
+
+
+        var divInfo = document.createElement('div')
+        divInfo.setAttribute("class", "info")
+        item.appendChild(divInfo)
+
+            var h3 = document.createElement('h3')
+            divInfo.appendChild(h3)
+            h3.innerHTML=`${produto.nome}`
+
+            var de = document.createElement('p')
+            de.setAttribute("class", "desc")
+            divInfo.appendChild(de)
+            de.innerHTML=`${produto.descricao}`
+
+            var pr = document.createElement('p')
+            pr.setAttribute("class", "price")
+            divInfo.appendChild(pr)
+            pr.innerHTML=`R$ ${produto.preco}`
+
+
+    }
 
 }
-
-
-
-
-
-/*var iR = document.querySelectorAll("div.imgR")[index]
-iR.innerHTML=`<img src="imagens/${produto.imagem}"style="width:140px;border-radius: 20px 0px 0px 20px;">`
-
-var h3 = document.getElementsByTagName('h3')[index]
-h3.innerHTML =`${produto.nome}`
-
-var de = document.querySelectorAll("p.desc")[index]
-de.innerHTML=`${produto.descricao} <br>`
-
-var pr = document.querySelectorAll("p.price")[index]
-pr.innerHTML=`R$ ${produto.preco}`
- 
-}*/

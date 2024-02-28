@@ -206,13 +206,15 @@ p.desc{
     font-family: "Inter", sans-serif;
     font-size: 8px;
     margin-top: 3px;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
     margin-left:3px;
     max-width:200px;
     max-height: 23px;
-    
+   
 }
 .price{
+    
+    
     color: #2E3A61;
     text-align: left;
     font-weight: 700;
@@ -254,14 +256,6 @@ div#buta{
 .imgR{
    
     border-radius: 20px 0px 0px 20px;
-  
+    
 }
 
-div#res{
-    background-color: pink;
-    width: 600px;
-    min-height: 200px;
-    text-align: center;
-    margin: auto;
-    padding: 50px;
-}
