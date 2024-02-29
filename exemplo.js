@@ -441,10 +441,12 @@ for( index in produtos){
         item.appendChild(divI)
 
             var imgR = document.createElement('p')
-            imgR.setAttribute("class", "price")
+            imgR.setAttribute("class", "imR")
             divI.appendChild(imgR)
-            imgR.innerHTML=`<img src="imagens/${produto.imagem}"style="max-width:110px;border-radius: 20px 0px 0px 20px;">`
-
+           /*imgR.innerHTML=`<img src="imagens/${produto.imagem}"style="max-width:110px;border-radius: 20px 0px 0px 20px;">`*/
+           imgR.style.backgroundImage=`url('imagens/${produto.imagem}')` 
+           
+    
 
         var divInfo = document.createElement('div')
         divInfo.setAttribute("class", "info")

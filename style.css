@@ -188,7 +188,7 @@ p.qprice{
     border: 1px solid white;
     border-radius: 20px;
     
-    width: 340px;
+    width: 360px;
     height: 95px;
     
     box-shadow: 0px 2px 16px 0px #00000040;
@@ -256,6 +256,17 @@ div#buta{
 .imgR{
    
     border-radius: 20px 0px 0px 20px;
-    
+    width: 120px;
+
+
 }
 
+.imR{
+   
+    border-radius: 20px 0px 0px 20px;
+    width: 120px;
+    height: 95px;
+    background: black center center no-repeat scroll;
+    background-size: cover;
+ 
+}
