@@ -11,7 +11,7 @@
    
 }
 body{
-   
+
     min-width: 420px;
     height: 125px;
     
@@ -34,7 +34,8 @@ header{
     padding-bottom: 5px;
     
 }
-header > h1{
+
+h1{
     color: #FFFFFF;
     font-family: "Istok Web", sans-serif;
 
@@ -46,7 +47,8 @@ header > h1{
     text-align: center;
     margin-bottom: none;
 }
-div#pesquisar{
+
+#pesquisar{
     background-color: rgb(253, 249, 253);
    
     font-size: 16px;
@@ -67,7 +69,7 @@ div#pesquisar{
     box-shadow: 0px 4px 4px 0px #00000040;
     
 }
-div#pesquisar>input#pesq{
+#pesq{
     background-color:transparent;
   padding-left:5px;
   font-size:18px;
@@ -77,7 +79,7 @@ div#pesquisar>input#pesq{
     
     
 }
-div#pesquisar>img#lupa{
+#lupa{
     position: relative;
     top: 3.1px;
 }
@@ -88,6 +90,7 @@ nav{
     display: flex;
     overflow-x: auto;
     padding-left: 15px;
+    
 }
 nav::-webkit-scrollbar{
     width: 0;
@@ -100,9 +103,10 @@ nav>a{
     border-radius: 20px;
     padding: 9px 15px;
     
-    border-left: 40px;
+    border-left: 90px;
     min-width: 105px;
     height: 17px;
+  
     margin-right: 12px;
     text-align: center;
 
@@ -115,16 +119,11 @@ nav>a{
     text-align: center;
 
 }
-main{
-   
-    padding: 30px;
-    
-    
-}
-h2 {
-   font-size: 17px;
-   padding-bottom: 13px;
 
+h2 {
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px 0px 15px 20px;
 }
 
 h3{
@@ -139,37 +138,43 @@ h3{
 }
 
 
-.recomendados{
-    background-color: white;
+.promocoes{
+    
     max-height: 220px;
+    border: 1px solid white;
     display: flex;
-    padding: 0px 18px 18px 18px;
+    overflow-x: auto;
+    padding: 15px;
+    
+}
+.promocoes::-webkit-scrollbar{
+    width: 0;
 }
 
-
-.card-recomendados{
+.card-promocoes{
    
     border: 1px solid white;
     border-radius: 20px;
-    border-left: 40px;
+    
 
-    width: 155px;
+    min-width: 155px;
     height: 148px;
     background-color: white;
-    margin-right: 15px;
     
+    
+    margin-right: 12px;
     box-shadow: 0px 4px 14px 0px #00000033;
-
+    
 }
-.img-recomendados{
+.img-promocoes{
     
     border-radius: 20px 20px 0px 0px;
     width: 100%;
-    height: 100px;
+    height: 85px;
     object-fit: cover;
 }
 
-.texto-recomendados{
+.texto-promocoes{
     text-align: center;
     font-family: "Inter", sans-serif;
     font-size: 8px;
@@ -177,7 +182,7 @@ h3{
     margin-bottom: 10px;
 }
 
-.preco-recomendados{
+.preco-promocoes{
     color: #E03D6E;
 
     text-align: center;
@@ -185,26 +190,35 @@ h3{
 
 }
 
-.reta{
+.card-retangulo{
     display: flex;
     background-color: white;
     border: 1px solid white;
     border-radius: 20px;
     
     width: 360px;
-    height: 95px;
+    height: 100px;
     
     box-shadow: 0px 2px 16px 0px #00000040;
-    margin-bottom: 14px;
+    
+    margin: 15px;
 
+}
+
+.img-retangulo{
+
+    border-radius: 20px 0px 0px 20px;
+    width: 120px;
+    height: 100px;
+    
 }
 .info{
   
-    margin-left: 8px;
-   
+    margin-left: 10px;
+    margin-top: 5px;
     
 }
-p.desc{
+.descricao{
     text-align: justify;
     font-family: "Inter", sans-serif;
     font-size: 8px;
@@ -216,8 +230,7 @@ p.desc{
    
 }
 .price{
-    
-    
+
     color: #2E3A61;
     text-align: left;
     font-weight: 700;
@@ -227,7 +240,7 @@ p.desc{
 
 footer{
     padding: 10px 30px;
-    margin-top: -50px;
+    margin-top: 20px;
 }
 footer>input#suba{
     width: 52px;
@@ -256,20 +269,5 @@ div#buta{
     height: 40px;
 } 
 
-.imgR{
-   
-    border-radius: 20px 0px 0px 20px;
-    width: 120px;
 
 
-}
-
-.imR{
-   
-    border-radius: 20px 0px 0px 20px;
-    width: 120px;
-    height: 95px;
-    background: black center center no-repeat scroll;
-    background-size: cover;
- 
-}
