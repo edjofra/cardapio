@@ -425,7 +425,6 @@ function init(){
     ListarTudo()
     mostrarCategoriasMenu()
     listandoTodosProdutosPromocao()
-    
     }
 init()
 
