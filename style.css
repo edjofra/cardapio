@@ -94,6 +94,7 @@ nav{
     display: flex;
     overflow-x: auto;
     padding-left: 15px;
+    padding-bottom: 15px;
     
 }
 nav::-webkit-scrollbar{
