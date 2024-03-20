@@ -414,59 +414,82 @@ var categorias = [
     {
         codigo:3,
         nome:"Bebidas"
+    },
+    {
+        codigo:4,
+        nome: "Bolos"
     }
-]
+];
 
-//CRIANDO os objetos dentro do JavaScript, p/ exibi-los no html, aproveitando os CSS originais 
-
-function imprimir(){
- var but = document.querySelector('input#but')
- 
- but.style.background = 'red'
- var lista = document.querySelector('ul#lista')
- lista.innerHTML=`<h2>Listando Tudo</h2>`
- 
-for( index in produtos){
-    
-    var produto = produtos[index]
-
-    
-    var item = document.createElement('li')
-    item.setAttribute('class','reta')
-    lista.appendChild(item)
-    
-   
-        var divI = document.createElement('div')
-        divI.setAttribute('class', 'imgR')
-        item.appendChild(divI)
-
-            var imgR = document.createElement('p')
-            imgR.setAttribute("class", "imR")
-            divI.appendChild(imgR)
-           /*imgR.innerHTML=`<img src="imagens/${produto.imagem}"style="max-width:110px;border-radius: 20px 0px 0px 20px;">`*/
-           imgR.style.backgroundImage=`url('imagens/${produto.imagem}')` 
-           
-    
-
-        var divInfo = document.createElement('div')
-        divInfo.setAttribute("class", "info")
-        item.appendChild(divInfo)
-
-            var h3 = document.createElement('h3')
-            divInfo.appendChild(h3)
-            h3.innerHTML=`${produto.nome}`
-
-            var de = document.createElement('p')
-            de.setAttribute("class", "desc")
-            divInfo.appendChild(de)
-            de.innerHTML=`${produto.descricao}`
-
-            var pr = document.createElement('p')
-            pr.setAttribute("class", "price")
-            divInfo.appendChild(pr)
-            pr.innerHTML=`R$ ${produto.preco}`
-
-
+function init(){
+    ListarTudo()
+    mostrarCategoriasMenu()
+    listandoTodosProdutosPromocao()
     }
+init()
+
+function criarCardCategoria(item){
+    
+    var listaMenu = document.getElementById('lista-menu')
+    listaMenu.innerHTML += `<a href="#" class="item">${item.nome}</a> `
 
 }
+function mostrarCategoriasMenu(){
+    for(index in categorias){
+        var categoria = categorias[index]
+        criarCardCategoria(categoria)
+    }
+}
+
+function cardProdutosPromocao (prato) {
+
+    var promocao = document.querySelector('#lista-promocoes')
+    
+    promocao.innerHTML+=`
+    <div class="card-promocoes">
+        <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-promocoes">
+        <p class="texto-promocoes">${prato.nome}</p>
+        
+        <p class="preco-promocoes">${formatarMoeda(prato.preco)}</p>
+    </div>
+    `
+}
+function listandoTodosProdutosPromocao (){
+    for (key in produtos){
+    var produto = produtos[key]
+        if(produto.promocao == true ){
+    cardProdutosPromocao (produto)
+        }
+    }
+    
+}
+
+function cardsRetangulos (cards){
+ 
+    var lista = document.querySelector('.lista')
+    lista.innerHTML+=`<li class="card-retangulo">
+                          <img src="imagens/${cards.imagem}" alt="${cards.nome}" class="img-retangulo">
+  
+                          <div class="info">
+                              <h3>${cards.nome}</h3>
+                              <p class="descricao">${cards.descricao}</p>
+                              <p class="price">${formatarMoeda(cards.preco)}</p>
+                              </div>
+                          </li>`
+                        
+} 
+function ListarTudo(){
+      for(key in produtos){
+      var produto = produtos[key]
+      cardsRetangulos(produto)
+      }
+}
+      
+function formatarMoeda(value){
+   return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+
+
+
+
