@@ -396,7 +396,7 @@ var produtos = [
         disponivel:true
     }
 
-];
+]
 
 var categorias = [
     {
@@ -414,82 +414,7 @@ var categorias = [
     {
         codigo:3,
         nome:"Bebidas"
-    },
-    {
-        codigo:4,
-        nome: "Bolos"
     }
-];
+]
 
-function init(){
-    ListarTudo()
-    mostrarCategoriasMenu()
-    listandoTodosProdutosPromocao()
-    }
-init()
-
-function criarCardCategoria(item){
-    
-    var listaMenu = document.getElementById('lista-menu')
-    listaMenu.innerHTML += `<a href="#" class="item">${item.nome}</a> `
-
-}
-function mostrarCategoriasMenu(){
-    for(index in categorias){
-        var categoria = categorias[index]
-        criarCardCategoria(categoria)
-    }
-}
-
-function cardProdutosPromocao (prato) {
-
-    var promocao = document.querySelector('#lista-promocoes')
-    
-    promocao.innerHTML+=`
-    <div class="card-promocoes">
-        <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-promocoes">
-        <p class="texto-promocoes">${prato.nome}</p>
-        
-        <p class="preco-promocoes">${formatarMoeda(prato.preco)}</p>
-    </div>
-    `
-}
-function listandoTodosProdutosPromocao (){
-    for (key in produtos){
-    var produto = produtos[key]
-        if(produto.promocao == true ){
-    cardProdutosPromocao (produto)
-        }
-    }
-    
-}
-
-function cardsRetangulos (cards){
- 
-    var lista = document.querySelector('.lista')
-    lista.innerHTML+=`<li class="card-retangulo">
-                          <img src="imagens/${cards.imagem}" alt="${cards.nome}" class="img-retangulo">
-  
-                          <div class="info">
-                              <h3>${cards.nome}</h3>
-                              <p class="descricao">${cards.descricao}</p>
-                              <p class="price">${formatarMoeda(cards.preco)}</p>
-                              </div>
-                          </li>`
-                        
-} 
-function ListarTudo(){
-      for(key in produtos){
-      var produto = produtos[key]
-      cardsRetangulos(produto)
-      }
-}
-      
-function formatarMoeda(value){
-   return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-}
-
-
-
-
-
+export {produtos, categorias}
