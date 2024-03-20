@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TESTANDODD</title>
+    <title>Teste Js</title>
     <link rel="stylesheet" href="style.css">
 
    
@@ -14,95 +14,59 @@
     <img src="imagens/emojione-monotone_pot-of-food.png" alt="emoji-head" id="emoji">
         <h1>Temperos do Cerrado</h1>
     </header>
+
     <div id="pesquisar">
         <img src="imagens/lupa.png" alt="Pesquise" id="lupa">
         <input type="search" name="pesq"id="pesq"  placeholder="Pesquise aqui">
     </div>
-   <nav>
+   <nav id="lista-menu">
     
         <a href="#" class="item">Espetos</a>
-        <a href="#" class="item">Carne na Chapa</a>
-        <a href="#" class="item">Porções</a>
-        <a href="#" class="item">Pratos feitos</a>
-        <a href="#" class="item">Bebidas</a>
-    
-
+        <!-- demais itens criados no Js -->
+       
    </nav>
    <main>
         <section>
-            <h2>Recomendações do chefe</h2>
+            <h2>Promoçoes</h2>
             
-                <div id="quad">
-                    <div class="qua">
-                        <img src="imagens/q1-esp.fra.bac.png" alt="q1-eps-frang" class="imgQ">
-                        <p class="qtext">Espeto de frango com bacon</p>
-                        <p class="qprice">R$29,90</p>
-                    </div>
-                    <div class="qua">
-                        <img src="imagens/q2-esp.picanha.png" alt="q2-esp-pic" class="imgQ">
-                        <p class="qtext">Espeto de picanha</p>
-                        <p class="qprice">R$35,90</p>
-                    </div>
-                </div>
+            <div id="lista-promocoes" class="promocoes">
+                <!-- itens criados no Js
+                    <div class="card-recomendados">
+                    <img src="imagens/q1-esp.fra.bac.png" alt="q1-eps-frang" class="img-recomendados">
+                    <p class="texto-recomendados">Espeto de frango com bacon</p>
+                    <p class="preco-recomendados">R$29,90</p>
+                </div>  -->
+                
+            </div>
            
 
         </section>    
        
-        <section>
-            <h2>Espetos</h2>
-            <div class="reta">
-                <div class="imgR">
-                    <img src="imagens/espeto-picanha.png" alt="esp-pic" >
-                </div>
-                <div class="info">
-                    <h3>Espeto de picanha</h3>
-                    <p  class="desc">Espeto de 200g, Proção de arroz, Farofa, Mandioca cozida </p>
-                    <p class="price">R$ 39,90</p>
-                </div>
-            </div>
-            <div class="reta">
-                <div class="imgR">
-                    <img src="imagens/espeto-contra.png" alt="esp-con">
-                </div>
-               <div class="info">
-                   <h3>Espeto de contra-filé</h3>
-                        <p class="desc">
-                            Espeto de 200g, Proção de arroz, Farofa,
-                            Mandioca cozida
-                        </p>
-                   
-                    <p class="price">R$ 29,90</p>
-               </div>
-            </div>
-            
-            <div class="reta">
-                <div class="imgR">
-                    <img src="imagens/espeto-frango.png" alt="esp-fra">
-                </div>
-                <div class="info">
-                    <h3>Espeto de frango com bacon</h3>
-                    <p class="desc">
-                        Espeto de 200g, Proção de arroz, Farofa,
-                        Mandioca cozida
-                    </p>
+        
+        <ul class="lista">
+            <h2>Todos os ítems</h2>
+                <!-- tens criados no Js
+                    <li class="card-retangulo">
+                    <img src="imagens/batata_frita.png" alt="gogo" class="img-retangulo">
+
                     
-                    <p class="price">R$ 29,90</p>
-                </div>
-            </div>
-        </section>
-            <ul id="lista">
-            </ul>
+                    <div class="info">
+                        <h3>Espeto de Frango</h3>
+                        <p class="descricao">Deliciosas rodelas de cebola empanadas e fritas, servidas com molho barbecue para mergulhar.</p>
+                         <p class="price">29.20</p>
+                        </div>
+                   
+                </li> -->
+        </ul>
 
         
    </main>
    
    <footer>
-<input type="button" value="UP" id="suba">
-<img src="imagens/subir.png" alt="botao-subir" id="img-up">
-   </footer>
-   <div id="buta">
-    <input type="button" value="GO" id="but" onclick="imprimir()">
-   </div>
+        <input type="button" value="UP" id="suba">
+        <img src="imagens/subir.png" alt="botao-subir" id="img-up">
+    </footer>
+   
    
     <script src="exemplo.js"></script>
 </body>
