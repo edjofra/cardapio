@@ -8,5 +8,5 @@ function formatarMoeda(categoria, attr){
 
 
 export default {
-    formatarMoeda: formatarMoeda,   
+    formatarMoedaReal: formatarMoeda,   
 }

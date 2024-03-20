@@ -4,10 +4,10 @@ import modificador from "./modificador.js"
 
 
 function init(){
-    modificador.formatarMoeda(produtos,'preco')
+    modificador.formatarMoedaReal(produtos,'preco')
     mostrarCategoriasMenu()
     listarProdutosPromocao()
-    listarTodositemsPorCategoria()
+    listarTodosItemsPorCategoria()
     
 }
 init()
@@ -53,7 +53,7 @@ function listarProdutosPromocao (){
     }  
 }
 
-function listarTodositemsPorCategoria(){
+function listarTodosItemsPorCategoria(){
    
     for(let key in categorias){
 
