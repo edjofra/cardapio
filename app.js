@@ -18,7 +18,7 @@ function mostrarCategoriasMenu(){
     function criarCardCategoria(item){
     
         var listaMenu = document.getElementById('lista-menu')
-        listaMenu.innerHTML += `<a href="#" class="item">${item.nome}</a> `
+        listaMenu.innerHTML += `<a href="#${item.nome}" class="item">${item.nome}</a> `
     
     }
 
@@ -59,7 +59,7 @@ function listarTodositemsPorCategoria(){
 
         var grupo = categorias[key] 
         var lista = document.querySelector('.lista')
-        lista.innerHTML+=`<h2> ${grupo.nome} </h2>`
+        lista.innerHTML+=`<h2 id="${grupo.nome}"> ${grupo.nome} </h2>`
 
         function criarCardsRetangulos (cards){
                 lista.innerHTML+=`<li class="card-retangulo">

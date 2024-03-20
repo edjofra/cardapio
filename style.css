@@ -10,6 +10,10 @@
     padding: 0px;
    
 }
+
+html{
+    scroll-behavior: smooth;
+}
 body{
 
     min-width: 420px;
