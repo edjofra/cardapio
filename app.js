@@ -1,54 +1,67 @@
 import { produtos,categorias } from "./dados.js"
 import modificador from "./modificador.js"
 
-modificador.moedaReal(produtos,'preco')
 
 
-
-function criarCardCategoria(item){
+function init(){
+    modificador.formatarMoeda(produtos,'preco')
+    mostrarCategoriasMenu()
+    listarProdutosPromocao()
+    listarTodositemsPorCategoria()
     
-    var listaMenu = document.getElementById('lista-menu')
-    listaMenu.innerHTML += `<a href="#" class="item">${item.nome}</a> `
-
 }
+init()
+
+
+
 function mostrarCategoriasMenu(){
+    function criarCardCategoria(item){
+    
+        var listaMenu = document.getElementById('lista-menu')
+        listaMenu.innerHTML += `<a href="#" class="item">${item.nome}</a> `
+    
+    }
+
     for(let index in categorias){
         var categoria = categorias[index]
         criarCardCategoria(categoria)
     }
+
 }
 
-function cardProdutosPromocao (prato) {
+function listarProdutosPromocao (){
 
-    var promocao = document.querySelector('#lista-promocoes')
-    
-    promocao.innerHTML+=`
-    <div class="card-promocoes">
-        <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-promocoes">
-        <p class="texto-promocoes">${prato.nome}</p>
+    function criarCardProdutosPromocao (prato) {
+
+        var promocao = document.querySelector('#lista-promocoes')
         
-        <p class="preco-promocoes">${prato.preco}</p>
-    </div>
-    `
-}
-function listandoTodosProdutosPromocao (){
+        promocao.innerHTML+=`
+        <div class="card-promocoes">
+            <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-promocoes">
+            <p class="texto-promocoes">${prato.nome}</p>
+            
+            <p class="preco-promocoes">${prato.preco}</p>
+        </div>
+        `
+    }
+    
     for (let key in produtos){
     var produto = produtos[key]
         if(produto.promocao == true ){
-    cardProdutosPromocao (produto)
+    criarCardProdutosPromocao (produto)
         }
     }  
 }
 
-function itemsPorCategoria(){
-    var lista = document.querySelector('.lista')
-        for(let key in categorias){
+function listarTodositemsPorCategoria(){
+   
+    for(let key in categorias){
 
-            var grupo = categorias[key] 
+        var grupo = categorias[key] 
+        var lista = document.querySelector('.lista')
+        lista.innerHTML+=`<h2> ${grupo.nome} </h2>`
 
-            lista.innerHTML+=`<h2> ${grupo.nome} </h2>`
-
-            function cardsRetangulos (cards){
+        function criarCardsRetangulos (cards){
                 lista.innerHTML+=`<li class="card-retangulo">
                                       <img src="imagens/${cards.imagem}" alt="${cards.nome}" class="img-retangulo">
               
@@ -59,34 +72,20 @@ function itemsPorCategoria(){
                                           </div>
                                 </li>`
                                     
-            } 
-            function ListarTudo(){
+        } 
+        function ListarTudo(){
                 for(let key in produtos){
                 var produto = produtos[key]
                 if(produto.categoria == grupo.codigo ){
-                cardsRetangulos(produto)
+                criarCardsRetangulos(produto)
                 }
                 }
-            }
-            ListarTudo()
-        }   
+        }
+        ListarTudo()
+        
+    }   
     
 }    
 
-function init(){
     
-    mostrarCategoriasMenu()
-    listandoTodosProdutosPromocao()
-    itemsPorCategoria()
-    
-}
-init()
-    
-    
-
-
-
-
-
-
 
